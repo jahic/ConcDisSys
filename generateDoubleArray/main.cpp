@@ -1,6 +1,6 @@
 /**
   * @author: jahic
-  * @details: generates a double array of random values and saves it into an array.
+  * @details: generates a double array of random values and saves it to a file.
   *
 */
 
@@ -32,11 +32,12 @@ void generateDoubleArrayGeneric(vector<vector<arrayDataType>>& array, int arrayL
             //array[i][j] = (rand() % maxValue);
     }
 
-    for (int i = 0; i < arrayLength; i++)
+    // Prints values to console.
+    /*for (int i = 0; i < arrayLength; i++)
     {
         for (int j = 0; j < arrayWidth; j++)
             cout << array[i][j] << endl;
-    }
+    }*/
 
     // Write to a file.
     // Open the File
@@ -96,7 +97,7 @@ int main(int argc, char* argv[])
     {
         cout << "Wrong number of arguments...exiting."<< endl;
         cout << "Template: ./progName arrayLenght arrayWidth elementsType maxValue fileName"<< endl;
-        cout << "Example: ./progName 1000 1000 i 5 doubleArray.txt"<< endl;
+        cout << "Example: ./generateDoubleArray 10 10 i 5 doubleArray.txt"<< endl;
         cout << "----------------------------------------------------------"<< endl;
         cout << "Help:"<< endl;
         cout << "   elementsType:"<< endl;
